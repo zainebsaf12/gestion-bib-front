@@ -1,0 +1,53 @@
+<div
+  class="position-relative row w-100 h-100 bg-gredient justify-content-center"
+>
+  <div class="col-lg-4 d-flex align-items-center">
+    <mat-card class="cardWithShadow boxed-auth">
+      <mat-card-content class="p-32">
+        <div class="text-center">
+          <a [routerLink]="['/dashboard']">
+            <img
+              src="../../../../assets/images/logos/logo.svg"
+              class="align-middle m-2"
+              alt="logo"
+            />
+          </a>
+        </div>
+
+
+
+        <form class="m-t-30">
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+          >Titre</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input matInput [(ngModel)]="livre.titre" name="titre"/>
+          </mat-form-field>
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+          >Auteur</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input matInput  [(ngModel)]="livre.auteur" name="auteur" />
+          </mat-form-field>
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+          >Année publication</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input matInput [(ngModel)]="livre.anneePublication" name="anneePublication" />
+          </mat-form-field>
+          <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+          >ISBN</mat-label
+          >
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input matInput  [(ngModel)]="livre.isbn" name="isbn"/>
+          </mat-form-field>
+          <button mat-flat-button color="primary" class="w-100" style="margin-bottom: 20px;" (click)="modifierLivre()">
+            modifier le livre
+          </button>
+
+        </form>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
